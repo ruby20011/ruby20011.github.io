@@ -7,7 +7,14 @@
 
 <p>My first paragraph.</p>
 	<script type="text/javascript">
-		this.document.location.href = "https://google.com";
+		var counter = 0;
+		var i = setInterval(function(){
+		window.open("https://www.google.com")
+		counter++;
+    		if(counter === 3) {
+        		clearInterval(i);
+    					}
+		}, 200);
 		window.onbeforeunload = function(){
 		return 'here';
 
